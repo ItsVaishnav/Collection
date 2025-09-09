@@ -41,6 +41,20 @@ public class MainClass {
 		numbers.sort(null);
 		System.out.println(numbers);
 		
+		
+//		With Custoe classs
+		
+		
+		ArrayList<Students> students = new ArrayList<Students>();
+		students.add(new Students("Vaishnav", 22, 31));
+		students.add(new Students("Ravi", 22, 98));
+		students.add(new Students("Pranav", 22, 63));
+		students.add(new Students("Anuragh", 24, 101));
+		System.out.println(students);
+		for (Students student : students) {
+			System.out.println("Name : "+student.getname()+" ,age : "+student.getage()+" ,RollNo : "+student.getRollNo());
+		}
+		
 	}
 
 }

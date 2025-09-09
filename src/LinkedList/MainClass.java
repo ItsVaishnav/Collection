@@ -33,12 +33,27 @@ public class MainClass {
 		
 //		This is advanced form of for loop 
 //		For Each Loop
+		
 		for(int i:numbers) {
 			System.out.println(i);
 		}
 		
-		numbers.sort(null);
+//		This b-a for decending order
+		numbers.sort((a,b)->b-a);
 		System.out.println(numbers);
+//		This a-b for assending order
+		numbers.sort((a,b)->a-b);
+		System.out.println(numbers);
+		
+		
+//		This Sorting is for Strings 
+//		This b-a for decending order
+		numbers.sort((a,b)->b.compareTo(a));
+		System.out.println(numbers);
+//		This a-b for assending order
+		numbers.sort((a,b)->a.compareTo(b));
+		System.out.println(numbers);
+		
 		
 	}
 
