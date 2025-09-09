@@ -1,12 +1,11 @@
-package ArrayList;
+package LinkedList;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		LinkedList<Integer> numbers = new LinkedList<Integer>();
 		numbers.add(10);
 		numbers.add(200);
 		numbers.add(30);
