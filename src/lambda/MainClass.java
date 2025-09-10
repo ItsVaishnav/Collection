@@ -1,13 +1,15 @@
 package lambda;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import ArrayList.Students;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		ArrayList<Student> st = new ArrayList<Student>();
+		List<Student> st = new ArrayList<Student>();
 		st.add(new Student("Vaishnav", 21, 31));
 		st.add(new Student("Ravi", 20, 98));
 		st.add(new Student("Pranav", 22, 63));
@@ -26,5 +28,13 @@ public class MainClass {
 		System.out.println("Sort Based on Name");
 		st.sort((s1, s2) -> s1.getName().compareTo(s2.getName()));
 		System.out.println(st);
+		
+		
+		
+		List<String> str = st.stream().map(x -> x.getName()).collect(Collectors.toList());
+		System.out.println(str);
+		
+		List<Student> str1 = st.stream().filter(x -> x.getName().toLowerCase().startsWith("a")).collect(Collectors.toList());
+		System.out.println(str1);
 	}
 }
